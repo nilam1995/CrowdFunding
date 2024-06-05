@@ -155,6 +155,7 @@ export const CrowdFundingProvider = ({children}) => {
   },[]);
 
  const connectWallet = async () => {
+    console.log("connectWallet")
     try{
       if(!window.ethereum) return console.log("Install MetaMask");
       const accounts = await window.ethereum.request({
@@ -162,7 +163,7 @@ export const CrowdFundingProvider = ({children}) => {
       })
       setCurrentAccount(accounts[0]);
     }catch(error){
-
+      console.log(error)
     }
   }
 
@@ -181,7 +182,7 @@ export const CrowdFundingProvider = ({children}) => {
     >
     {children}
     </CrowdFundingContext.Provider>
-  )
+  );
 
-}
+};
 
