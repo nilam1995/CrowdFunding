@@ -1,6 +1,6 @@
 import React from "react";
 
-const ICON = () => {
+const Icon = () => {
   return (
     <svg
       className="absolute inset-x-0 bottom-0 text-white"
@@ -14,4 +14,4 @@ const ICON = () => {
   );
 };
 
-export default ICON;
+export default Icon;

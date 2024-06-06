@@ -135,7 +135,6 @@ const NavBar = () => {
               <Logo color="text-white"/>
               <span className="text-gray-200 text-xl flex text-center h-auto  uppercase font-bold pl-2">Company</span>
             </div>
-            
             <ul className="hidden sm:block md:flex items-center justify-center">
               {menuList.map((item,i) => (
                 <li key={i+1}>
@@ -150,7 +149,6 @@ const NavBar = () => {
               ))}
             </ul>
             <div className=" flex-grow z-40"></div>
-            
               <div className="flex justify-center md:hidden lg:hidden">
                 <button onClick={() => !isMenuOpen ? setIsMenuOPen(true) : setIsMenuOPen(false)} className={isMenuOpen ? "" : ""}>
                   <Menu color="text-white"/>
@@ -171,7 +169,7 @@ const NavBar = () => {
             </div>
         </div>
       </div>
-      <div className= {!isMenuOpen ? "hidden" : "absolute flex right-0 w-1/2 h-screen backgroundMain md:hidden lg:hidden"}>
+      <div className= {!isMenuOpen ? "hidden" : "absolute flex right-0 w-1/2 h-screen backgroundMain z-50 md:hidden lg:hidden"}>
         <ul className="relative flex-col justify-center w-full">
           {menuList.map((item,i) => (
             <li key={i+1} className="flex w-full justify-center py-5">
